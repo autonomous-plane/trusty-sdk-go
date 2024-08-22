@@ -26,7 +26,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/stacklok/trusty-sdk-go/pkg/types"
+	"github.com/autonomous-plane/trusty-sdk-go/pkg/types"
 )
 
 func newFakeClient() *fakeClient {

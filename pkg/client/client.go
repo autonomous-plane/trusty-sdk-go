@@ -28,7 +28,7 @@ import (
 	packageurl "github.com/package-url/packageurl-go"
 	khttp "sigs.k8s.io/release-utils/http"
 
-	"github.com/stacklok/trusty-sdk-go/pkg/types"
+	"github.com/autonomous-plane/trusty-sdk-go/pkg/types"
 )
 
 const (

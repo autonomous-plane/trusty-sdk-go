@@ -18,7 +18,7 @@ package parser
 import (
 	"strings"
 
-	"github.com/stacklok/trusty-sdk-go/pkg/types"
+	"github.com/autonomous-plane/trusty-sdk-go/pkg/types"
 )
 
 // ParseGoMod parses the content of a go.mod file and returns a slice of dependencies.

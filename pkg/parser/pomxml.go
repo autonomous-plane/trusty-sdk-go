@@ -18,7 +18,7 @@ package parser
 import (
 	"encoding/xml"
 
-	"github.com/stacklok/trusty-sdk-go/pkg/types"
+	"github.com/autonomous-plane/trusty-sdk-go/pkg/types"
 )
 
 // ParsePomXml parses the content of a POM XML file and returns a slice of dependencies

@@ -18,7 +18,7 @@ package parser
 import (
 	"strings"
 
-	"github.com/stacklok/trusty-sdk-go/pkg/types"
+	"github.com/autonomous-plane/trusty-sdk-go/pkg/types"
 )
 
 // ParseRequirementsTxt parses requirements.txt content and extracts dependencies
