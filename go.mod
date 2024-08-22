@@ -1,4 +1,4 @@
-module github.com/stacklok/trusty-sdk-go
+module github.com/autonomous-plane/trusty-sdk-go
 
 go 1.22.1
 
