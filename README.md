@@ -24,8 +24,6 @@ func main() {
 			Version: "4.17.1",
 			Ecosystem: types.ECOSYSTEM_NPM}); err == nil {
 		fmt.Println(jsonutil.ToPretty(report))
-	} else {
-		panic(err)
 	}
 }
 ```
