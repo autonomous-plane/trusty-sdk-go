@@ -30,3 +30,6 @@ func main() {
 }
 ```
 
+Online portal to lookup dependency information: https://www.trustypkg.dev/
+
+
