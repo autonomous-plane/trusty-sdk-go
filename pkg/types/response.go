@@ -14,7 +14,11 @@
 
 package types
 
-import "time"
+import (
+	"fmt"
+	"time"
+	"strings"
+)
 
 type Time time.Time
 
