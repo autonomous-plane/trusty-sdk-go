@@ -193,11 +193,15 @@ func (t *Trusty) PackageEndpoint(dep *types.Dependency) (string, error) {
 func (_ *Trusty) PurlToEcosystem(purl string) types.Ecosystem {
 	switch {
 	case strings.HasPrefix(purl, "pkg:golang"):
-		return types.ECOSYSTEM_GO
+		return types.EcosystemGo
 	case strings.HasPrefix(purl, "pkg:npm"):
-		return types.ECOSYSTEM_NPM
+		return types.EcosystemNpm
 	case strings.HasPrefix(purl, "pkg:pypi"):
-		return types.ECOSYSTEM_PYPI
+		return types.EcosystemPypi
+	case strings.HasPrefix(purl, "pkg:maven"):
+		return types.EcosystemMaven
+	case strings.HasPrefix(purl, "pkg:cargo"):
+		return types.EcosystemCrates
 	default:
 		return types.Ecosystem(0)
 	}

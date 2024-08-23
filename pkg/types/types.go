@@ -27,32 +27,44 @@ type Dependency struct {
 }
 
 const (
-	// ECOSYSTEM_NPM identifies the NPM ecosystem
-	ECOSYSTEM_NPM Ecosystem = 1
+	// EcosystemNpm identifies the NPM ecosystem
+	EcosystemNpm Ecosystem = 1
 
-	// ECOSYSTEM_GO identifies the Go language
-	ECOSYSTEM_GO Ecosystem = 2
+	// EcosystemGo identifies the Go language
+	EcosystemGo Ecosystem = 2
 
-	// ECOSYSTEM_PYPI identifies the Python Package Index
-	ECOSYSTEM_PYPI Ecosystem = 3
+	// EcosystemPypi identifies the Python Package Index
+	EcosystemPypi Ecosystem = 3
+
+	// EcosystemMaven identifies the Python Package Index
+	EcosystemMaven Ecosystem = 4
+
+	// EcosystemCrates identifies the Python Package Index
+	EcosystemCrates Ecosystem = 5
 )
 
 // Ecosystems enumerates the supported ecosystems
 var Ecosystems = map[string]Ecosystem{
-	"ECOSYSTEM_NPM":  ECOSYSTEM_NPM,
-	"ECOSYSTEM_GO":   ECOSYSTEM_GO,
-	"ECOSYSTEM_PYPI": ECOSYSTEM_PYPI,
+	"EcosystemNpm":  EcosystemNpm,
+	"EcosystemGo":   EcosystemGo,
+	"EcosystemPypi": EcosystemPypi,
+	"EcosystemMaven": EcosystemMaven,
+	"EcosystemCrates": EcosystemCrates,
 }
 
 // AsString returns the string representation of the DepEcosystem
 func (ecosystem Ecosystem) AsString() string {
 	switch ecosystem {
-	case ECOSYSTEM_NPM:
+	case EcosystemNpm:
 		return "npm"
-	case ECOSYSTEM_GO:
+	case EcosystemGo:
 		return "Go"
-	case ECOSYSTEM_PYPI:
+	case EcosystemPypi:
 		return "PyPI"
+	case EcosystemMaven:
+		return "Maven"
+	case EcosystemCrates:
+		return "crates"
 	default:
 		return ""
 	}

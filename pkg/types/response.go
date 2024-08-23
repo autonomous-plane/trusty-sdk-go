@@ -23,6 +23,7 @@ import (
 type Time time.Time
 
 const timeLayout = "2006-01-02T15:04:05.000000"
+const shortRFC3339TimeLayout = "2006-01-02T15:04:05"
 
 func (t *Time) UnmarshalJSON(b []byte) (err error) {
 	s := strings.Trim(string(b), `"`)
@@ -34,6 +35,10 @@ func (t *Time) UnmarshalJSON(b []byte) (err error) {
 	var nt time.Time
 	if strings.Contains(s, "Z") {
 		nt, err = time.Parse(time.RFC3339, s)
+	} else if len(s) == len(shortRFC3339TimeLayout) {
+		nt, err = time.Parse(shortRFC3339TimeLayout, s) 
+	} else if len(s) == len(time.RFC3339Nano) && strings.Contains(s, "Z") {
+		nt, err = time.Parse(time.RFC3339Nano, s) 
 	} else {
 		nt, err = time.Parse(timeLayout, s)
 	}
