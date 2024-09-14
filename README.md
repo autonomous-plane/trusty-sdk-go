@@ -1,3 +1,5 @@
+[![Go Reference](https://pkg.go.dev/badge/github.com/autonomous-plane/trusty-sdk-go.svg)](https://pkg.go.dev/github.com/autonomous-plane/trusty-sdk-go)
+
 # trusty-sdk-go - Enhanced
 A Golang SDK for trusty
 
